@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoMaterialModule } from './material';
 import { HomeComponent } from './home/home.component';
-//import { ProductsModule } from './products/products.module';
+import { ProductsModule } from './products/products.module';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     DemoMaterialModule,
-  //  ProductsModule
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

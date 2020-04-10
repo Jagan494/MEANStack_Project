@@ -5,6 +5,7 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductDataService } from './product-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
+import { DemoMaterialModule } from 'app/material';
 
 
 
@@ -13,7 +14,7 @@ import { ProductsComponent } from './products/products.component';
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    HttpClientModule
+    HttpClientModule,DemoMaterialModule
   ],
   providers : [ProductDataService]
 })
