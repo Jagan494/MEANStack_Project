@@ -7,18 +7,23 @@ import { AppComponent } from './app.component';
 import { DemoMaterialModule } from './material';
 import { HomeComponent } from './home/home.component';
 import { ProductsModule } from './products/products.module';
-
-
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DemoMaterialModule,
-    ProductsModule
+    ProductsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
