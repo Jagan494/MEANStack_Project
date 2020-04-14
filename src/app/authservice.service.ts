@@ -1,14 +1,7 @@
 import { Injectable } from '@angular/core';
 import { of, Subject } from 'rxjs';
-import { FormGroup } from "@angular/forms";
-import { Interface } from 'readline';
+import { User } from './user';
 
-
-export interface User{
-  email: string;
-  fullname: string;
-  password: string
-}
 @Injectable({
   providedIn: 'root'
 })
@@ -22,21 +15,29 @@ export class AuthserviceService {
     return this.user$.asObservable();
   }
   
-  register(user: any) {
-     return of({user});
+  register(user:any) {
+     //make an api call to update the db for this user
+     //update the user subject
+    this.setuser(user);
+    console.log("Registered succesfully!")
+    return of({user});
   }
 
-  
-  
-  
-  login(email: string , password: string) {
-     
-    const logCred = {email, password};
-    console.log("ASDFGHJKL");
+  logout() {
+    //remove user from subject
+    this.setuser(null);
+    console.log("User logged out successfully")
+  }
 
+  login(email: string , password: string) {
+    const logCred = {email, password};
     console.log("Logged in creds", logCred);
     return of({logCred});
   }
-
+  
+  private setuser(user)
+  {
+    this.user$.next(user);
+  }
   
 }
