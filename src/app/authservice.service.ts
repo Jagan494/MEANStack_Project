@@ -21,7 +21,7 @@ export class AuthserviceService {
   register(user:any) {
      //make an api call to update the db for this user
      //update the user subject
-    return this.httpClient.post<User>('http://localhost:8080/api/auth/register/', user).pipe(switchMap(savedUser => {
+    return this.httpClient.post<User>('http://localhost:4050/api/auth/register/', user).pipe(switchMap(savedUser => {
       this.setuser(savedUser);
       return of(savedUser)
     }),
@@ -40,7 +40,7 @@ export class AuthserviceService {
 
   login(email: string , password: string) {
     const logCred = {email, password};
-    return this.httpClient.post<User>('http://localhost:8080/api/auth/login/', logCred).pipe(
+    return this.httpClient.post<User>('http://localhost:4050/api/auth/login/', logCred).pipe(
       switchMap( fetchedUser => {
             this.setuser(fetchedUser);
             console.log('user found');
