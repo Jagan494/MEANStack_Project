@@ -32,6 +32,7 @@
                             type="email"
                             >
                         </mat-form-field>
+                        
                     </td>
                 </tr>
                 <tr>
@@ -48,10 +49,28 @@
                         </mat-form-field>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <mat-form-field>
+                            <input 
+                            name="repeatpassword"
+                            formControlName = "repeatpassword"
+                            matInput 
+                            placeholder="Re-enter Password"
+                            required
+                            type="password"
+                            >
+                        </mat-form-field>
+                    </td>
+                </tr>
             </table>
         </form>
     </mat-card-content>
     <mat-card-actions>
         <button mat-raised-button color= "primary" (click)="register()">Register</button>
+        <span> Already have an account?
+            <a routerLink="/login"routerLinkActive = "active-link">login</a>
+            here
+        </span>
     </mat-card-actions>
 </mat-card>

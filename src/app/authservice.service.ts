@@ -10,7 +10,7 @@ export class AuthserviceService {
   private user$ = new Subject<User>();
 
   constructor() { }
-
+ 
   get user(){
     return this.user$.asObservable();
   }
