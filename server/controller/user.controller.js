@@ -1,10 +1,9 @@
 users = [];
-console.log('Saving the data')
+
 async function insert(user){
+    console.log('Saving the data')
     users.push(user);
     return user;
 }
 
-module.exports = {
-    insert
-};
+module.exports = insert;

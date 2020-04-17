@@ -13,7 +13,7 @@ const app = express()
 
 //logger 
 
-if(config.env == 'development'){
+if(config.env === 'development'){
     app.use(logger('dev'));
 }
 
@@ -34,7 +34,7 @@ app.use(bodyparser.urlencoded({
 app.use(helmet())
 app.use(cors())
 
-
+debugger
 app.use('/api/', routes)
 //serve index from dist
 

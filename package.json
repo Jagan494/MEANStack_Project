@@ -10,7 +10,8 @@
     "build:prod": "npm run build -- --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "proxy": "http://localhost:8080/"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +31,7 @@
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "helmet": "^3.22.0",
+    "mongoose": "^5.9.7",
     "morgan": "^1.10.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
