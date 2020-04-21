@@ -40,8 +40,17 @@ export class AuthserviceService {
 
   login(email: string , password: string) {
     const logCred = {email, password};
-    console.log("Logged in creds", logCred);
-    return of({logCred});
+    return this.httpClient.post<User>('http://localhost:8080/api/auth/login/', logCred).pipe(
+      switchMap( fetchedUser => {
+            this.setuser(fetchedUser);
+            console.log('user found');
+            return of(fetchedUser);
+      }),
+      catchError( e => {
+        console.log('Server error occured ', e);
+        return throwError('login failed');
+      })
+    )
   }
   
   private setuser(user)

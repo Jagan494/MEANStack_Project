@@ -19,7 +19,7 @@ if(config.env === 'development'){
 
 //get dist folder
 
-const distDir = path.join(__dirname, '../../dist')
+const distDir = path.join(__dirname, '../../dist/MEANProject')
 
 //use dist as hosting env
 app.use(express.static(distDir));

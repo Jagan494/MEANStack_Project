@@ -11,7 +11,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "proxy": "http://localhost:8080/"
+    "proxy": "http://localhost:4050/",
+    "debug": "node --nolazy --inspect-brk=9229 server"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +26,7 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
+    "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

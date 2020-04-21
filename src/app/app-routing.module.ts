@@ -9,8 +9,8 @@ import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   {
     path : '',
-    pathMatch : 'full',
-    redirectTo: 'home'
+    redirectTo: 'home',
+    pathMatch : 'full'
   },
   {
     path : 'home',
