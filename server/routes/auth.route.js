@@ -8,6 +8,7 @@ router.post('/register', asyncHandler(insert));
 router.post('/login', asyncHandler(getUserByEmailAndPassword));
 
 async function insert(req, res, next){
+    debugger;
     const user = req.body;
     console.log('Registering user', user);
     const savedUser = await userController.insert(user);
@@ -16,6 +17,7 @@ async function insert(req, res, next){
 }
 
 async function getUserByEmailAndPassword(req, res, next){
+    debugger;
     const user = req.body;
     console.log('logging user, tracking from server', user);
     const savedUser = await userController.getUserByEmailAndPassword(user.email, user.password);
