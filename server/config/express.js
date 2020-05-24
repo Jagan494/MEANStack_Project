@@ -34,7 +34,9 @@ app.use(bodyparser.urlencoded({
 app.use(helmet())
 app.use(cors())
 
-debugger
+
+
+
 app.use('/api/', routes)
 //serve index from dist
 
